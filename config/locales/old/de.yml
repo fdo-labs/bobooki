@@ -48,14 +48,14 @@ de:
     fn_legal_footer:
       crowd_funding: "Dein Bobooki braucht Dich! Jetzt Anteile zeichnen:\nhttps://www.fairmondo.de/anteile"
       spacer: "----------"
-      intro: "Diese Nachricht wurde von Bobooki, www.nachbarschaftsmarktplatz.de, gesendet."
-      contact: "Kontakt: nama.coop@posteo.de, Bobooki c/o Jakob Kolb, Fuldastr. 19 12045 Berlin"
+      intro: "Diese Nachricht wurde von Bobooki.de gesendet."
+      contact: "Kontakt: hallo@bobooki.de, Bobooki c/o FDO Solutions GmbH, Glogauer Str. 21, 10999 Berlin"
       footer_contact: |
         Bobooki
-        c/o Jakob Kolb
-        Fuldastr. 19
-        12045 Berlin
-        nama.coop@posteo.de
+        c/o FDO Solutions GmbH
+        Glogauer Str. 21
+        10999 Berlin
+        hello@bobooki.de
       registered: |
       board: ""
       ceo: ""
