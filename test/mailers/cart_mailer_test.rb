@@ -55,7 +55,7 @@ class CartMailerTest < ActiveSupport::TestCase
     expect(mail).must have_body_text(business_transaction.article_title)
 
     # Seller information
-    expect(mail).must have_subject('[Nachbarschaftsmarktplatz] Artikel ausliefern')
+    expect(mail).must have_subject('[Bobooki] Artikel ausliefern')
     expect(mail).must have_body_text(seller.fullname)
     expect(mail).must have_body_text(seller.standard_address_first_name)
     expect(mail).must have_body_text(seller.standard_address_last_name)
@@ -103,7 +103,7 @@ class CartMailerTest < ActiveSupport::TestCase
       mail = CartMailer.send_cart(cart.id, addr)
 
       expect(mail).must deliver_to(addr)
-      expect(mail).must have_subject('[Nachbarschaftsmarktplatz] Deine vorgemerkten Artikel auf dem Nachbarschaftsmarktplatz')
+      expect(mail).must have_subject('[Bobooki] Deine vorgemerkten Artikel auf Bobooki')
     end
   end
 end

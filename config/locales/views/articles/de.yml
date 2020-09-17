@@ -3,7 +3,7 @@ de:
     form:
       faire_welt_ad:
         heading: "Faire-Welt-Abos"
-        text_html : "Der Nachbarschaftsmarktplatz für Dich kostenlos. Du kannst unsere Arbeit durch ein %{link} monatlich unterstützen."
+        text_html : "Bobooki für Dich kostenlos. Du kannst unsere Arbeit durch ein %{link} monatlich unterstützen."
         link:
           text: "Faire-Welt-Abo"
           target: "https://www.fairmondo.de/articles/das-faire-welt-abo-10"

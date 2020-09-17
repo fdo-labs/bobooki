@@ -3,8 +3,8 @@ de:
     confirmation:
       resend: "Registrierungs-E-Mail erneut schicken"
       text: >
-        Vielen Dank für Deine Registrierung auf dem Nachbarschaftsmarktplatz, dem lokalen Online-Marktplatz in Hand seiner Nutzer*innen!
-        Durch Deine Registrierung hast Du Dich bereit erklärt, die angehängten AGB und die Datenschutzerklärung des Nachbarschaftsmarktplatz zu akzeptieren.
+        Vielen Dank für Deine Registrierung auf Bobooki, dem lokalen Online-Marktplatz in Hand seiner Nutzer*innen!
+        Durch Deine Registrierung hast Du Dich bereit erklärt, die angehängten AGB und die Datenschutzerklärung von Bobooki zu akzeptieren.
         Bitte bestätige Deine E-Mail-Adresse sowie den Erhalt und die Lesbarkeit der beigefügten AGB und Datenschutzbestimmungen um den Registrierungsvorgang abzuschließen.
         Für die Bestätigung der Registrierung gehe bitte auf den folgenden Link:
       link: "Meine Registrierung sowie den Erhalt und die Lesbarkeit der AGB und Datenschutzbestimmungen bestätigen."
@@ -16,7 +16,7 @@ de:
         link: "E-Mail-Adresse bestätigen"
         info: "Deine E-Mail-Adresse ändert sich erst, wenn Du den oben angegebenen Link benutzt, um die neue E-Mail-Adresse zu bestätigen."
     reset:
-      text: "Jemand hat einen Link zum Ändern Deines Passworts auf dem Nachbarschaftsmarktplatz angefordert. Um Dein Passwort zu ändern, klicke auf den folgenden Link:"
+      text: "Jemand hat einen Link zum Ändern Deines Passworts auf Bobooki angefordert. Um Dein Passwort zu ändern, klicke auf den folgenden Link:"
       link: "Passwort hier ändern"
       ignoremail_begin: "Falls Du diese E-Mail nicht angefordert hast, wende Dich bitte an unseren Kundenservice: "
       ignoremail_addr: "nama.coop@posteo.de"

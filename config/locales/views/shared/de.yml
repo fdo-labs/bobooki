@@ -1,15 +1,15 @@
 de:
   shared:
     fairmondo:
-      name: "Nachbarschaftsmarktplatz"
+      name: "Bobooki"
       claim: "Solidarisch durch die Krise"
       url: "https://shop.nachbarschaftsmarktplatz.de/"
     meta_tags:
       description: |
         Kaufe lokal - Mode,
-        Bücher, Lebensmittel, Spielzeug und Designartikel auf dem Nachbarschaftsmarktplatz,
+        Bücher, Lebensmittel, Spielzeug und Designartikel auf Bobooki,
         dem Online Marktplatz des lokalen Einzelhandel.
-      keywords: "Nachbarschaftsmarktplatz, Solidarisch, Fair, Genossenschaft"
+      keywords: "Bobooki, Solidarisch, Fair, Genossenschaft"
     actions:
       logout: "Abmelden"
       login: "Anmelden"
