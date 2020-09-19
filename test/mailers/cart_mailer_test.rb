@@ -49,7 +49,7 @@ class CartMailerTest < ActiveSupport::TestCase
     mail            = CartMailer.courier_notification(business_transaction)
 
     expect(mail).must_deliver_to 'test@test.com'
-    expect(mail).must_bcc_to 'bybike@fairmondo.de'
+    expect(mail).must_bcc_to 'bybike@bobooki.de'
 
     # Article information
     expect(mail).must have_body_text(business_transaction.article_title)

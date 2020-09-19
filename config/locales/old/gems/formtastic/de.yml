@@ -280,7 +280,7 @@ de:
     tooltips:
       user: &tooltips_user
         new: &new_user
-          type: 'Wenn Du nicht sicher bist, ob Du ein gewerbliches Nutzerkonto benötigst, frage am Besten bei Deinem Finanzamt nach. Du kannst Dein Konto aber auch später umwandeln lassen. Mehr dazu in unserer <a href="https://www.fairmondo.de/faq#b9" target= "_blank">FAQ</a>.'
+          type: 'Wenn Du nicht sicher bist, ob Du ein gewerbliches Nutzerkonto benötigst, frage am Besten bei Deinem Finanzamt nach. Du kannst Dein Konto aber auch später umwandeln lassen. Mehr dazu in unserer <a href="https://www.bobooki.de/faq#b9" target= "_blank">FAQ</a>.'
           email:  "An diese Adresse verschicken wir die Anmeldebestätigung."
           nickname: "Diesen Namen sehen auch andere Nutzer*innen."
           password: "Dein Passwort muss mindestens 6 Zeichen haben. Dein Account wird sicherer, wenn Du auch Zahlen und Großbuchstaben fürs Passwort verwendest."
@@ -351,9 +351,9 @@ de:
         commendation_input_step: "Auf Bobooki können alle rechtlich unbedenklichen Artikel eingestellt werden. Wenn Dein Artikel unter die Kriterien für einen oder mehrere unserer besonderen Filter fällt, kannst Du hier entsprechende Angaben zu Deinem Artikel machen. Dadurch wird Dein Artikel besonders ausgezeichnet. Nutzer*innen können gezielt nach solchen Artikeln suchen."
         upload_images_input_step: "Du kannst Bilder bis zu einer maximalen Größe von 2 MB pro Bild hochladen. Wir verwenden in der Kachelansicht die Maße 260x180 Pixel, und in der Artikelansicht 520x360 Pixel. Wenn Dein Bild von diesen Maßen abweicht, wird es beschnitten dargestellt."
         friendly_percent_input_step: >
-          Du kannst optional einen weiteren Prozentsatz des Verkaufspreises spenden – den Spendenanteil. Für die Weiterleitung des Spendenanteils an die Empfängerorganisation bist Du selbst verantwortlich. Es können ausschließlich Organisationen, die sich zu besonderer Transparenz verpflichten und von uns akkreditiert sind, Spenden erhalten. Mehr Informationen zum Ablauf und zum Spendenanteil findest Du <a href="https://www.fairmondo.de/faq#spa2" target= "_blank">hier</a>.
+          Du kannst optional einen weiteren Prozentsatz des Verkaufspreises spenden – den Spendenanteil. Für die Weiterleitung des Spendenanteils an die Empfängerorganisation bist Du selbst verantwortlich. Es können ausschließlich Organisationen, die sich zu besonderer Transparenz verpflichten und von uns akkreditiert sind, Spenden erhalten. Mehr Informationen zum Ablauf und zum Spendenanteil findest Du <a href="https://www.bobooki.de/faq#spa2" target= "_blank">hier</a>.
         friendly_percent_organisation: >
-          Du kannst hier aus Empfängerorganisationen wählen, die von Bobooki akkreditiert sind. Mehr Informationen dazu findest Du <a href="https://www.fairmondo.de/faq#spa1" target= "_blank">hier</a>.Wenn Du eine Organisation anwählst, erhältst Du einen weiterführenden Link mit mehr Informationen zu der entsprechenden Organisation.
+          Du kannst hier aus Empfängerorganisationen wählen, die von Bobooki akkreditiert sind. Mehr Informationen dazu findest Du <a href="https://www.bobooki.de/faq#spa1" target= "_blank">hier</a>.Wenn Du eine Organisation anwählst, erhältst Du einen weiterführenden Link mit mehr Informationen zu der entsprechenden Organisation.
         article_template: "Speichere Deine Eingaben als Vorlage – so gelingt das Einstellen ähnlicher Artikel im Handumdrehen."
 
         date: "Datum (Tag/Monat/Jahr)"

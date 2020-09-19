@@ -42,7 +42,7 @@ class CartMailer < ActionMailer::Base
     @courier_email   = Rails.env == 'production' ? COURIER['email'] : 'test@test.com'
 
     if @business_transaction.line_item_group.paypal_payment && @business_transaction.line_item_group.paypal_payment.confirmed?
-      mail(to: @courier_email, subject: @subject, bcc: 'bybike@fairmondo.de')
+      mail(to: @courier_email, subject: @subject, bcc: 'bybike@bobooki.de')
     end
   end
 

@@ -1,9 +1,9 @@
 <SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
-  <os:ShortName>Fairmondo</os:ShortName>
-  <os:Description>Fairmondo - Gutes einfach entdecken</os:Description>
+  <os:ShortName>Bobooki</os:ShortName>
+  <os:Description>Bobooki - Gutes einfach entdecken</os:Description>
   <os:InputEncoding>UTF-8</os:InputEncoding>
   <os:Image width="16" height="16">data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAzpksAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAABEBEAAAAAABEQERAAAAABERAREQAAABEREBEREAABEREQERERABERERAREREQERAREBEQERABEREQERERAAAREQABERAAAAEQAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP1/AAD5PwAA8R8AAOEPAADBBwAAgQMAAAEBAAAREQAAgQMAAMOHAADnzwAA//8AAP//AAD//wAA</os:Image>
-  <SearchForm>https://www.fairmondo.de</SearchForm>
-  <os:Url type="text/html" method="GET" template="https://www.fairmondo.de/articles?article_search_form[q]={searchTerms}"></os:Url>
-  <os:Url type="application/opensearchdescription+xml" method="GET" template="https://www.fairmondo.de/opensearch.xml" rel="self"></os:Url>
+  <SearchForm>https://www.bobooki.de</SearchForm>
+  <os:Url type="text/html" method="GET" template="https://www.bobooki.de/articles?article_search_form[q]={searchTerms}"></os:Url>
+  <os:Url type="application/opensearchdescription+xml" method="GET" template="https://www.bobooki.de/opensearch.xml" rel="self"></os:Url>
 </SearchPlugin>
