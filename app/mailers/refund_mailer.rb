@@ -7,8 +7,8 @@ class RefundMailer < ActionMailer::Base
 
   def refund_notification refund
     @refund = refund
-    mail(to: 'storno@fairmondo.de',
-         subject: '[Nachbarschaftsmarktplatz] ' + 'Rueckerstattung: Transationsnummer: ' + "#{refund.business_transaction.id}") do |format|
+    mail(to: 'storno@bobooki.de',
+         subject: '[Bobooki] ' + 'Rueckerstattung: Transationsnummer: ' + "#{refund.business_transaction.id}") do |format|
       format.text
     end
   end

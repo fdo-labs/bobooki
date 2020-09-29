@@ -22,7 +22,7 @@ de:
         link:        "Jetzt ansehen"
         label:       "fair"
       ecologic:
-        teaser_html: "Öko? Logisch!<br>Auf dem Nachbarschaftsmarktplatz."
+        teaser_html: "Öko? Logisch!<br>Auf Bobooki."
         description: "Öko-Produkte auf einen Blick"
         link:        "Hier reinschauen"
         label:       "öko"
@@ -48,8 +48,8 @@ de:
       :1:
         quote: |
           Für Veränderungen in der Gesellschaft benötigt es mehr Mut –
-          auf dem Nachbarschaftsmarktplatz erleben wir viele junge mutige Menschen. Wir freuen
-          uns auf die Zusammenarbeit mit Fairmondo, wünschen der
+          auf Bobooki erleben wir viele junge mutige Menschen. Wir freuen
+          uns auf die Zusammenarbeit mit Bobooki, wünschen der
           Genossenschaft einen erfolgreichen Start, viele Mitglieder und
           viel Erfolg auf dem Weg zu mehr Transparenz in Onlinehandel und
           Gesellschaft!
@@ -57,32 +57,32 @@ de:
 
       :2:
         quote: |
-          Ich bin Genossenschafts-Mitglied auf dem Nachbarschaftsmarktplatz, weil es uns
-          Spaß macht, Fairmondo mitzuentwickeln. Für uns ist Fairmondo
+          Ich bin Genossenschafts-Mitglied auf Bobooki, weil es uns
+          Spaß macht, Bobooki mitzuentwickeln. Für uns ist Bobooki
           eine super Plattform, um unsere ethisch produzierten Produkte zu
           vermarkten.
         source: "Isabelle Dechamps, Be Able"
 
       :3:
         quote: |
-          Auf dem Nachbarschaftsmarktplatz finde ich genial, dass die Struktur eine
+          Auf Bobooki finde ich genial, dass die Struktur eine
           Genossenschaft ist. Das heißt, ich bin Genosse dort, ich kann
           mitentscheiden, was da passiert – und was mit der Firma passiert.
         source: "Van Bo Le-Mentzel, Architekt"
 
       :4:
         quote: |
-          Ich bin Genossin auf dem Nachbarschaftsmarktplatz, weil ich glaube, dass wir
-          alle bewusster konsumieren sollten. Fairmondo gibt uns online die
+          Ich bin Genossin auf Bobooki, weil ich glaube, dass wir
+          alle bewusster konsumieren sollten. Bobooki gibt uns online die
           Chance dazu – und deswegen bin ich gerne ein Teil davon.
         source: "Maria Gross, Social Impact Lab"
 
       :5:
         quote: |
-          Ich bin in die Genossenschaft Fairmondo eingestiegen, weil
+          Ich bin in die Genossenschaft Bobooki eingestiegen, weil
           ich die Idee sehr überzeugend finde. Ich hab’ das Team auch
           kennengelernt und ich sehe, dass die wirklich mit Enthusiasmus und
-          viel Elan dabei sind. Wir handeln auf dem Nachbarschaftsmarktplatz, weil wir darin
+          viel Elan dabei sind. Wir handeln auf Bobooki, weil wir darin
           eine Chance sehen, faire und Bio-Produkte weiter zu verbreiten.
         source: "Thomas Kappauf, Black Star"
 
@@ -101,5 +101,5 @@ de:
 
     coop_teaser:
       alt_text: |
-        Über 2000 Menschen haben sich bereits an der Fairmondo-Genossenschaft
+        Über 2000 Menschen haben sich bereits an der Bobooki-Genossenschaft
         beteiligt.

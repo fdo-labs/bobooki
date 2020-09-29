@@ -69,9 +69,10 @@ Fairmondo::Application.configure do
 
   Paperclip.options[:command_path] = "/usr/bin"
 
+  ActionMailer::Base.default :from => Rails.application.secrets.default_sender
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings  = {
-    port: 25,
+    port: Rails.application.secrets.actionmailer_port || 25,
     authentication: :login,
     address: Rails.application.secrets.actionmailer_address,
     user_name: Rails.application.secrets.actoinmailer_username,
@@ -102,4 +103,11 @@ Fairmondo::Application.configure do
       sender_address: Rails.application.secrets.default_sender,
       exception_recipients: [Rails.application.secrets.exceptions_recipient]
     }
+
+  # Setup paypal gateway
+  paypal = config_for(:paypal).symbolize_keys
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :production
+    ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new( **paypal )
+  end
 end

@@ -18,7 +18,7 @@ class CartMailer < ActionMailer::Base
 
     @cart = cart
     @buyer = cart.user
-    @subject = "[Nachbarschaftsmarktplatz] #{ t('transaction.notifications.buyer.buyer_subject') } vom #{ @cart.line_item_groups.first.sold_at.strftime('%d.%m.%Y %H:%M') }"
+    @subject = "[Bobooki] #{ t('transaction.notifications.buyer.buyer_subject') } vom #{ @cart.line_item_groups.first.sold_at.strftime('%d.%m.%Y %H:%M') }"
 
     mail(to: @buyer.email, subject: @subject)
   end
@@ -29,7 +29,7 @@ class CartMailer < ActionMailer::Base
     @line_item_group = line_item_group
     @buyer = line_item_group.buyer
     @seller = line_item_group.seller
-    @subject = "[Nachbarschaftsmarktplatz] #{ t('transaction.notifications.seller.seller_subject') } Verkauf Nr: #{ line_item_group.purchase_id }"
+    @subject = "[Bobooki] #{ t('transaction.notifications.seller.seller_subject') } Verkauf Nr: #{ line_item_group.purchase_id }"
 
     mail(to: @seller.email_for_order_notifications, subject: @subject)
   end
@@ -38,11 +38,11 @@ class CartMailer < ActionMailer::Base
     @business_transaction = business_transaction
     @buyer           = business_transaction.buyer
     @seller          = business_transaction.seller
-    @subject         = '[Nachbarschaftsmarktplatz] Artikel ausliefern'
+    @subject         = '[Bobooki] Artikel ausliefern'
     @courier_email   = Rails.env == 'production' ? COURIER['email'] : 'test@test.com'
 
     if @business_transaction.line_item_group.paypal_payment && @business_transaction.line_item_group.paypal_payment.confirmed?
-      mail(to: @courier_email, subject: @subject, bcc: 'bybike@fairmondo.de')
+      mail(to: @courier_email, subject: @subject, bcc: 'bybike@bobooki.de')
     end
   end
 
@@ -52,7 +52,7 @@ class CartMailer < ActionMailer::Base
 
     @buyer = @payment.line_item_group_buyer
     @seller = @payment.line_item_group_seller
-    @subject = "[Nachbarschaftsmarktplatz] #{ t('transaction.notifications.seller.seller_voucher_subject') }"
+    @subject = "[Bobooki] #{ t('transaction.notifications.seller.seller_voucher_subject') }"
 
     mail(to: @seller.email, subject: @subject)
   end

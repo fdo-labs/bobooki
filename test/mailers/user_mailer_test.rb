@@ -18,7 +18,7 @@ class UserMailerTest < ActiveSupport::TestCase
     mail = UserMailer.contact(sender: sender, resource_id: receiver.id, text: text)
 
     expect(mail).must deliver_to receiver.email
-    value(mail.subject).must_equal('[Nachbarschaftsmarktplatz] ein/e Nutzer*in hat eine Frage an Dich')
+    value(mail.subject).must_equal('[Bobooki] ein/e Nutzer*in hat eine Frage an Dich')
     expect(mail).must have_body_text sender.nickname
     expect(mail).must have_body_text user_url sender.id
     expect(mail).must have_body_text sender.email

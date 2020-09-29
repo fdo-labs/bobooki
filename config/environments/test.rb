@@ -59,4 +59,10 @@ Fairmondo::Application.configure do
 
   # Set host by default
   Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+
+  # Setup paypal gateway
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::GATEWAY = ActiveMerchant::Billing::BogusGateway.new
+  end
 end

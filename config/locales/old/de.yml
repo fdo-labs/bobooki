@@ -1,6 +1,6 @@
 de:
   welcome:
-    greetings: "Willkommen auf dem Nachbarschaftsmarktplatz"
+    greetings: "Willkommen auf Bobooki"
     search_fair: "Artikel oder Anbieter suchen"
     # trending_libraries: "Trend-Sammlungen" Nach Weihnachten zurückstellen
     trending_libraries:
@@ -10,7 +10,7 @@ de:
       heading: "Mit Spendenanteil"
       more: "Mehr Artikel mit Spendenanteil"
     fairmondo-shirts:
-      heading: "Nachbarschaftsmarktplatz"
+      heading: "Bobooki"
       more: "Mehr"
     vouchers:
       heading: "Gutscheine, die Gutes tun"
@@ -24,7 +24,7 @@ de:
         link:        "Jetzt ansehen"
         label:       "fair"
       ecologic:
-        teaser_html: "Solidarisch durch die Krise. Mit dem Nachbarschaftsmarktplatz."
+        teaser_html: "Solidarisch durch die Krise. Mit Bobooki."
         description: "Öko-Produkte auf einen Blick"
         link:        "Hier reinschauen"
         label:       "öko"
@@ -40,29 +40,29 @@ de:
         label:       "gebraucht"
 # Common Texts
   common:
-    brand: "www.nachbarschaftsmarktplatz.de"
-    fairmondo: "Nachbarschaftsmarktplatz – Solidarisch durch die Krise"
-    fairmondo_name: "Nachbarschaftsmarktplatz"
+    brand: "bobooki.de"
+    fairmondo: "Bobooki – Solidarisch durch die Krise"
+    fairmondo_name: "Bobooki"
     claim: "dreh' das Spiel um"
-    fn_footer_greeting: "Dein Nachbarschaftsmarktplatz-Team"
+    fn_footer_greeting: "Dein Bobooki-Team"
     fn_legal_footer:
-      crowd_funding: "Dein Nachbarschaftsmarktplatz braucht Dich! Jetzt Anteile zeichnen:\nhttps://www.fairmondo.de/anteile"
+      crowd_funding: "Dein Bobooki braucht Dich! Jetzt Anteile zeichnen:\nhttps://www.bobooki.de/anteile"
       spacer: "----------"
-      intro: "Diese Nachricht wurde vom Nachbarschaftsmarktplatz, www.nachbarschaftsmarktplatz.de, gesendet."
-      contact: "Kontakt: nama.coop@posteo.de, Nachbarschaftsmarktplatz c/o Jakob Kolb, Fuldastr. 19 12045 Berlin"
+      intro: "Diese Nachricht wurde von Bobooki.de gesendet."
+      contact: "Kontakt: hallo@bobooki.de, Bobooki c/o FDO Solutions GmbH, Glogauer Str. 21, 10999 Berlin"
       footer_contact: |
-        Nachbarschaftsmarktplatz
-        c/o Jakob Kolb
-        Fuldastr. 19
-        12045 Berlin
-        nama.coop@posteo.de
+        Bobooki
+        c/o FDO Solutions GmbH
+        Glogauer Str. 21
+        10999 Berlin
+        hallo@bobooki.de
       registered: |
       board: ""
       ceo: ""
       supervisory_board: ""
-      facebook: "Facebook: https://fb.me/nama.coop"
-      facebook_html: "<a href='https://fb.me/nama.coop'>Facebook</a>"
-      buy_shares: "Anteile zeichnen: https://shop.nachbarschaftsmarktplatz.de/anteile"
+      facebook: "Facebook: https://fb.me/bobooki"
+      facebook_html: "<a href='https://fb.me/bobooki'>Facebook</a>"
+      buy_shares: "Anteile zeichnen: https://bobooki.de/anteile"
     actions:
       continue: "Weiter"
       back: "Zurück"
@@ -111,7 +111,7 @@ de:
       surname: "Nachname"
       relation: "Beziehung"
       inserted: "Artikel wurden bereits eingestellt"
-      no_search_result_text: "Keine Suchergebnisse auf dem Nachbarschaftsmarktplatz"
+      no_search_result_text: "Keine Suchergebnisse auf Bobooki"
       libraries: "Sammlungen"
       my_libraries: "Meine Sammlungen"
       about_terms: "Meine Firmendaten"
@@ -172,8 +172,8 @@ de:
       article_not_found_html: '<p><b>Fehler:</b> Mindestens ein Artikel konnte nicht gefunden werden.</p>'
 
   meta_tags:
-    description: "Kaufe, verkaufe, tausche und verleihe faire und nachhaltige Mode, Bücher, Lebensmittel, Spielzeug und Designartikel auf dem Nachbarschaftsmarktplatz, dem Online Marktplatz Geschäfte in deiner Nähe."
-    keywords: "Nachbarschaftsmarktplatz, COVID-19 Crisis Relief, Marktplatz, Fair, Genossenschaft"
+    description: "Kaufe, verkaufe, tausche und verleihe faire und nachhaltige Mode, Bücher, Lebensmittel, Spielzeug und Designartikel auf Bobooki, dem Online Marktplatz Geschäfte in deiner Nähe."
+    keywords: "Bobooki, COVID-19 Crisis Relief, Marktplatz, Fair, Genossenschaft"
 
   flash:
     ratings:
@@ -192,4 +192,4 @@ de:
         notice: "%{resource_name} wurde gelöscht."
         alert: "%{resource_name} konnte nicht gelöscht werden."
 
-  noscript: "Du hast JavaScript ausgeschaltet oder verwendest einen Browser, der kein JavaScript unterstützt. Um den Nachbarschaftsmarktplatz optimal zu nutzen, schalte bitte JavaScript ein."
+  noscript: "Du hast JavaScript ausgeschaltet oder verwendest einen Browser, der kein JavaScript unterstützt. Um Bobooki optimal zu nutzen, schalte bitte JavaScript ein."

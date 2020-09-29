@@ -1,0 +1,14 @@
+production:
+  login: "***REMOVED***"
+  password: "***REMOVED***"
+  signature: "***REMOVED***"
+staging:
+  login: "***REMOVED***"
+  password: "***REMOVED***"
+  signature: "***REMOVED***"
+development:
+  login: "***REMOVED***"
+  password: "***REMOVED***"
+  signature: "***REMOVED***"
+test:
+  login: sandbox

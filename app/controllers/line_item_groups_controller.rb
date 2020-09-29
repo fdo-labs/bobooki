@@ -11,7 +11,13 @@ class LineItemGroupsController < ApplicationController
   def show
     authorize @line_item_group
     @abacus = Abacus.new(@line_item_group)
-    if params[:paid] == 'true'
+
+    if params[:token].present? && params[:PayerID].present?
+      @line_item_group.paypal_payment.proceed params[:token]
+      payment_confirmed = @line_item_group.paypal_payment.confirmed?
+    end
+
+    if params[:paid] == 'true' && payment_confirmed
       flash[:notice] = I18n.t 'line_item_group.notices.paypal_success'
     elsif params[:paid] == 'false'
       flash[:error] = I18n.t 'line_item_group.notices.paypal_cancel'

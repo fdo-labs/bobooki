@@ -114,7 +114,7 @@ gem 'savon' # interacing with other SOAP apis:
 gem 'rubyntlm' # https://github.com/savonrb/savon/issues/593
 
 # Paypal integration
-gem 'paypal_adaptive'
+gem 'activemerchant'
 
 # ---------- Development ----------
 
@@ -126,7 +126,7 @@ group :development do
   gem 'letter_opener' # emails in browser
 
   # I18n Tools
-  # gem 'i18n-tasks', '~> 0.8.3' # uncomment if needed
+  # gem 'i18n-tasks', '~> 0.8.3' q
 
   # Capistrano deployment
   gem 'capistrano-rails', '~> 1.1.3'

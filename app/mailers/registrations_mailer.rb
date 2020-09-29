@@ -9,6 +9,6 @@ class RegistrationsMailer < ActionMailer::Base
 
   def voluntary_contribution_email(email, amount)
     @amount = amount
-    mail(to: email, subject: 'Dein freiwilliger Grundbeitrag für den Nachbarschaftsmarktplatz')
+    mail(to: email, subject: 'Dein freiwilliger Grundbeitrag für den Bobooki')
   end
 end
