@@ -1,14 +1,14 @@
 production:
-  login: login
-  password: password
-  signature: signature
+  login: "***REMOVED***"
+  password: "***REMOVED***"
+  signature: "***REMOVED***"
 staging:
-  login: login
-  password: password
-  signature: signature
+  login: "***REMOVED***"
+  password: "***REMOVED***"
+  signature: "***REMOVED***"
 development:
-  login: login
-  password: password
-  signature: signature
+  login: "***REMOVED***"
+  password: "***REMOVED***"
+  signature: "***REMOVED***"
 test:
   login: sandbox
