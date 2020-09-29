@@ -103,4 +103,11 @@ Fairmondo::Application.configure do
       sender_address: Rails.application.secrets.default_sender,
       exception_recipients: [Rails.application.secrets.exceptions_recipient]
     }
+
+  # Setup paypal gateway
+  paypal = config_for(:paypal).symbolize_keys
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :production
+    ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new( **paypal )
+  end
 end

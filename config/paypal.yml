@@ -1,0 +1,14 @@
+production:
+  login: login
+  password: password
+  signature: signature
+staging:
+  login: login
+  password: password
+  signature: signature
+development:
+  login: login
+  password: password
+  signature: signature
+test:
+  login: sandbox

@@ -26,7 +26,7 @@ class PaymentsController < ApplicationController
   def show
     @payment = Payment.find(params[:id])
     authorize @payment
-    redirect_to PaypalAPI.checkout_url @payment.pay_key
+    redirect_to @payment.checkout_url
   end
 
   # receives instant payment notifications from paypal
