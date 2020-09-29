@@ -81,4 +81,11 @@ Fairmondo::Application.configure do
   Rails.application.routes.default_url_options[:protocol] = Rails.application.secrets.base_protocol
   #Memcached
   config.cache_store = :dalli_store, 'localhost', { :namespace => "nama_stage", :expires_in => 1.day, :compress => true }
+
+  # Setup paypal gateway
+  paypal = config_for(:paypal).symbolize_keys
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new( **paypal )
+  end
 end
