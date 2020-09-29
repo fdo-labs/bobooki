@@ -35,8 +35,6 @@ rails_best_practices_output.html
 
 config/secrets.yml
 
-#api keys
-config/paypal_adaptive.yml
 #email addresses
 config/email_addresses.yml
 
@@ -109,7 +107,7 @@ sidekiq_pro_path.yml
 .rvmrc
 
 # Paypal
-paypal_adaptive.yml
+paypal.yml
 
 # mac DS_Store
 *.DS_Store
