@@ -10,11 +10,9 @@ footer.l-footer
           = t('.company.heading')
         ul
           li
-            = link_to t('.company.about_us'), '/ueber_uns'
+            = link_to t('.company.about_us'), t('shared.urls.about_us')
           li
-            = link_to t('.company.map'), 'https://map.bobooki.de/', target: "_blank"
-          li
-            = link_to t('.company.github'), 'https://github.com/fdo-labs/bobooki', target: "_blank"
+            = link_to t('.company.github'), t('shared.urls.github'), target: "_blank"
           
 
       / Marketplace
@@ -40,14 +38,14 @@ footer.l-footer
           = t('.service.heading')
         ul
           li
-            = link_to t('.service.faq'), '/faq'
+            = link_to t('.service.faq'), t('shared.urls.faq')
           li
             = link_to t('.service.help'), new_feedback_path(variety: :get_help)
           li
             = link_to t('.service.feedback'),
                       new_feedback_path(variety: :send_feedback)
           li
-            = link_to t('.service.contact'), '/kontakt'
+            = link_to t('.service.contact'), t('shared.urls.contact')
 
       section
         a href="https://wirvsvirushackathon.org/" target="_blank" = image_tag('wirvsvirus_logo-480x208.png', style:"width:100%")
@@ -78,8 +76,8 @@ footer.l-footer
 
     / Legal links
     p.l-footer-legal
-      = link_to t('.legal.agb'), '/agb'
+      = link_to t('.legal.terms'), t('shared.urls.terms')
       | &emsp;
-      = link_to t('.legal.privacy'), '/privacy'
+      = link_to t('.legal.privacy'), t('shared.urls.privacy')
       | &emsp;
-      = link_to t('.legal.impressum'), '/imprint'
+      = link_to t('.legal.imprint'), t('shared.urls.imprint')

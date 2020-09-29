@@ -4,28 +4,20 @@
   .l-footer-middle
     ul
       li
-        a*{href: "https://bobooki.de/faq", target: 'blank'}
-          = t('footer.faq')
+        = link_to t('footer.service.faq'), link_to t('shared.urls.faq'), target: 'blank'
       li
-        a*{href: "https://t.me/bobooki", target: 'blank'}
-          = t('footer.forum')
+        = link_to t('footer.service.forum'), t('shared.urls.forum'), target: 'blank'
       li
-        a*{href: "https://bobooki.de/kontakt", target: 'blank'}
-          = t('footer.contact')
+        = link_to t('footer.service.contact'), t('shared.urls.contact'), target: 'blank'
       li
-        a*{href: "https://bobooki.de/ueber_uns", target: 'blank'}
-          = t('footer.about_us')
+        = link_to t('footer.company.about_us'), t('shared.urls.about_us'), target: 'blank'
   .l-footer-right
     ul
       li
-        a*{href: "https://bobooki.de/agb", target: 'blank'}
-          = t('footer.agb')
+        = link_to t('footer.legal.terms'), t('shared.urls.terms'), target: 'blank'
       li
-        a*{href: "https://bobooki.de/privacy", target: 'blank'}
-          = t('footer.privacy')
+        = link_to t('footer.legal.privacy'), t('shared.urls.privacy'), target: '_blank'
       li
-        a*{href: "https://bobooki.de/imprint", target: 'blank'}
-          = t('footer.imprint')
+        = link_to t('footer.legal.imprint'), t('shared.urls.imprint'), target: '_blank'
   .l-footer-copyright
-    | &copy;
-    = "Copyright #{Time.now.strftime('%Y')} Bobooki.de"
+    =  t('shared.copyright_html')

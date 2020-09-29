@@ -14,4 +14,11 @@ de:
       logout: "Abmelden"
       login: "Anmelden"
       sign_up: "Registrieren"
-
+    urls:
+      faq: '/faq'
+      terms: '/agb'
+      privacy: '/datenschutz'
+      about_us: '/ueber_uns'
+      contact: '/kontakt'
+      forum: '/forum'
+      github: 'https://github.com/fdo-labs/bobooki'

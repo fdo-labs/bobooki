@@ -55,9 +55,9 @@ de:
           instagram: "Instagram"
           twitter: "Twitter"
         legal:
-          agb: "AGB"
+          terms: "AGB"
           privacy: "Datenschutz"
-          impressum: "Impressum"
+          imprint: "Impressum"
         copyright_html: *copyright
       footer_reduced:
         agb: "AGB"
