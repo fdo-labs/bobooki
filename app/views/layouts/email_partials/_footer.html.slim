@@ -4,20 +4,20 @@
   .l-footer-middle
     ul
       li
-        = link_to t('footer.service.faq'), t('shared.urls.faq'), target: 'blank'
+        = link_to t('layouts.partials.footer.service.faq'), t('shared.urls.faq'), target: 'blank'
+      /li
+        = link_to t('layouts.partials.footer.service.forum'), t('shared.urls.forum'), target: 'blank'
       li
-        = link_to t('footer.service.forum'), t('shared.urls.forum'), target: 'blank'
+        = link_to t('layouts.partials.footer.service.contact'), t('shared.urls.contact'), target: 'blank'
       li
-        = link_to t('footer.service.contact'), t('shared.urls.contact'), target: 'blank'
-      li
-        = link_to t('footer.company.about_us'), t('shared.urls.about_us'), target: 'blank'
+        = link_to t('layouts.partials.footer.company.about_us'), t('shared.urls.about_us'), target: 'blank'
   .l-footer-right
     ul
       li
-        = link_to t('footer.legal.terms'), t('shared.urls.terms'), target: 'blank'
+        = link_to t('layouts.partials.footer.legal.terms'), t('shared.urls.terms'), target: 'blank'
       li
-        = link_to t('footer.legal.privacy'), t('shared.urls.privacy'), target: '_blank'
+        = link_to t('layouts.partials.footer.legal.privacy'), t('shared.urls.privacy'), target: '_blank'
       li
-        = link_to t('footer.legal.imprint'), t('shared.urls.imprint'), target: '_blank'
+        = link_to t('layouts.partials.footer.legal.imprint'), t('shared.urls.imprint'), target: '_blank'
   .l-footer-copyright
     =  t('shared.copyright_html')

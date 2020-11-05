@@ -38,7 +38,6 @@ class ArticleMailer < ActionMailer::Base
   def mass_upload_activation_message mass_upload_id
     @mass_upload = MassUpload.find mass_upload_id
     @user = @mass_upload.user
-    terms_pdf
     mail(to: @user.email, subject: I18n.t('email.article.mass_activation.subject') )
   end
 
