@@ -75,7 +75,7 @@ Fairmondo::Application.configure do
     port: Rails.application.secrets.actionmailer_port || 25,
     authentication: :login,
     address: Rails.application.secrets.actionmailer_address,
-    user_name: Rails.application.secrets.actoinmailer_username,
+    user_name: Rails.application.secrets.actionmailer_username,
     password: Rails.application.secrets.actionmailer_password
   }
 
