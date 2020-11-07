@@ -5,8 +5,8 @@
 # config valid only for Capistrano 3.1
 lock '3.12.1'
 
-set :application, 'nachbarschaftsmarktplatz'
-set :repo_url, 'git://github.com/fdo-labs/nachbarschaftsmarktplatz.git'
+set :application, 'bobooki'
+set :repo_url, 'git://github.com/fdo-labs/bobooki.git'
 
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, File.read('.ruby-version').strip # set ruby version from the file
