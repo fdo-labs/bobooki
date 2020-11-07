@@ -19,7 +19,7 @@ gem 'monetize' # parsing money
 gem 'enumerize', '>= 0.5.1' # enums as symbols in ar
 gem 'state_machines' # State Machines in Rails
 gem 'amoeba'
-gem 'sanitize' # Parser based sanitization
+gem 'sanitize', '>= 5.2.1' # Parser based sanitization; vulnerability for "< 5.2.1"
 gem 'awesome_nested_set', '3.1.3'
 gem 'friendly_id', '>= 4.0.9' # Friendly_id for beautiful links
 
@@ -174,7 +174,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'rubocop' # style enforcement
   gem 'bullet' # Notify about n+1 queries
-  gem 'puma' # Replace Webrick
+  gem 'puma', '>= 4.3.5' # Replace Webrick
 end
 
 group :development, :test, :staging do
