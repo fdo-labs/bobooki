@@ -22,8 +22,9 @@ footer.l-footer
         ul
           li
             = link_to t('.marketplace.sign_up'), new_user_registration_path
-          li
-            = link_to t('.marketplace.buy'), articles_path
+          - if User.is_admin? current_user
+            li
+              = link_to t('.marketplace.buy'), articles_path
           li
             = link_to t('.marketplace.sell'), new_article_path
           /li

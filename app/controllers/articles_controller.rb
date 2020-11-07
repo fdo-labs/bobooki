@@ -36,6 +36,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    raise Pundit::NotAuthorizedError unless current_user.admin?
     @article = current_user.articles.build(params.require(:article).permit(*ARTICLE_CREATE_PARAMS))
     if params && params[:article][:article_template_name].present?
       @article.save_as_template = '1'
@@ -46,6 +47,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    raise Pundit::NotAuthorizedError unless current_user.admin?
     if params[:template] && params[:template][:article_id].present?
       new_from_template
     elsif params[:edit_as_new]
