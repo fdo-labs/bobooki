@@ -39,7 +39,7 @@ class PaypalPayment < Payment
       self.paypal_token = response.token
       true # continue
     else
-      self.error = response.errors.to_json
+      self.error = response.error_code.to_json
       puts response.message
       false # errored instead of initialized
     end
