@@ -51,9 +51,9 @@ nav id="l-header-mnav" class="l-header-mnav" role="navigation"
             = link_to t('.admin.sidekiq'), sidekiq_web_path + "_"
 
     / Marketplace
-    li.l-header-mnav-menu-item.l-header-mnav--parent
-      em= t('.marketplace.title')
-      ul.mnav-menu-item-submenu
+    li.l-header-mnav-menu-item
+      = link_to t('.libraries'), libraries_path, data: navigation_push
+      /ul.mnav-menu-item-submenu
         li.mnav-menu-item-submenu-item
           = link_to t('.marketplace.buy'), articles_path
         - if User.is_admin? current_user

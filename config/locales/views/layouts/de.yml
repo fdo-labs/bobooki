@@ -81,6 +81,7 @@ de:
           buy: "Kaufen"
           sell: "Verkaufen"
           libraries: "Sammlungen"
+        libraries: "Empfehlungen"
         subscriptions: "Runde Sache Abo"
         myfairmondo:
           title: 'Mein Konto'
