@@ -4,6 +4,30 @@ a id="l-header-mnav-toggle" class="l-header-mnav-toggle" href="#"
 nav id="l-header-mnav" class="l-header-mnav" role="navigation"
   ul.l-header-mnav-menu
 
+    / Cart
+    - if current_cart && policy(current_cart).show?(cookies.signed[:cart])\
+        && !current_cart.line_items.empty?
+      li.l-header-mnav-menu-item
+        = link_to t('.cart.title_html', count: current_cart.line_item_count),
+                current_cart, data: navigation_push
+    - else
+      li.l-header-mnav-menu-item
+        = link_to t('.cart.title_html', count: 0),
+                empty_cart_path, data: navigation_push
+    
+    / Marketplace
+    li.l-header-mnav-menu-item
+      = link_to t('.libraries'), libraries_path, data: navigation_push
+    /ul.mnav-menu-item-submenu
+            li.mnav-menu-item-submenu-item
+              = link_to t('.marketplace.buy'), articles_path
+            - if User.is_admin? current_user
+              li.mnav-menu-item-submenu-item
+                = link_to t('.marketplace.sell'), new_article_path
+            li.mnav-menu-item-submenu-item
+              = link_to t('.marketplace.libraries'), libraries_path,
+                        data: navigation_push
+
     - if user_signed_in?
       / Profile & Logout
       li.l-header-mnav-menu-item.l-header-mnav--parent
@@ -25,17 +49,6 @@ nav id="l-header-mnav" class="l-header-mnav" role="navigation"
       li.l-header-mnav-menu-item
         = link_to t('shared.actions.sign_up'), new_user_registration_path
 
-    / Cart
-    - if current_cart && policy(current_cart).show?(cookies.signed[:cart])\
-        && !current_cart.line_items.empty?
-      li.l-header-mnav-menu-item
-        = link_to t('.cart.title_html', count: current_cart.line_item_count),
-                  current_cart, data: navigation_push
-    - else
-      li.l-header-mnav-menu-item
-        = link_to t('.cart.title_html', count: 0),
-                  empty_cart_path, data: navigation_push
-
     / Admin
     - if User.is_admin? current_user
       li.l-header-mnav-menu-item.l-header-mnav--parent
@@ -50,19 +63,6 @@ nav id="l-header-mnav" class="l-header-mnav" role="navigation"
           li.mnav-menu-item-submenu-item
             = link_to t('.admin.sidekiq'), sidekiq_web_path + "_"
 
-    / Marketplace
-    li.l-header-mnav-menu-item
-      = link_to t('.libraries'), libraries_path, data: navigation_push
-      /ul.mnav-menu-item-submenu
-        li.mnav-menu-item-submenu-item
-          = link_to t('.marketplace.buy'), articles_path
-        - if User.is_admin? current_user
-          li.mnav-menu-item-submenu-item
-            = link_to t('.marketplace.sell'), new_article_path
-        li.mnav-menu-item-submenu-item
-          = link_to t('.marketplace.libraries'), libraries_path,
-                    data: navigation_push
-
     / About us
     li.l-header-mnav-menu-item
       = link_to t('.about_us.title'), '/ueber_uns'
@@ -72,7 +72,7 @@ nav.l-header-nav
   ul
 
     / Marketplace
-    li.TouchHover
+    /li.TouchHover
       = link_to t('.marketplace.title'), articles_path,
                 class: 'TouchHover--indicator'
       ul.l-header-nav-dropdown.TouchHover--hidden
@@ -84,6 +84,10 @@ nav.l-header-nav
         li
           = link_to t('.marketplace.libraries'), libraries_path,
                     data: navigation_push
+
+    / Suggestions
+    li.TouchHover
+      = link_to t('.libraries'), libraries_path, data: navigation_push
 
     / Profile & Logout
     - if user_signed_in?
