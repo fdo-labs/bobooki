@@ -24,6 +24,9 @@ de:
           affiliate: "Partnerprogramm"
           fairmondo_shop: "Bobooki-Shop"
           categories: "Kategorien"
+        stories:
+          heading: "Bobooki Stories"
+          suggestions: "Empfehlungen und Hintergrundgeschichten"
         subscription:
           heading: Runde-Sache-Abo
           order: Bestellen

@@ -16,7 +16,7 @@ footer.l-footer
           
 
       / Marketplace
-      section
+      /section
         h4
           = t('.marketplace.heading')
         ul
@@ -32,6 +32,14 @@ footer.l-footer
                       data: navigation_push
           li
             = link_to t('.marketplace.categories'), categories_path
+
+      / Bobooki Stories
+      section
+        h4
+          = t('.stories.heading')
+        ul
+          li
+            = link_to t('.stories.suggestions'), t('shared.urls.stories'), target: "_blank"
 
       / Service
       section
