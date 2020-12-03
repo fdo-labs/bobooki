@@ -71,6 +71,30 @@ nav id="l-header-mnav" class="l-header-mnav" role="navigation"
 nav.l-header-nav
   ul
 
+    / About us
+    li.TouchHover
+      = link_to t('.about_us.title'), '/ueber_uns', class: 'TouchHover--indicator'
+      ul.l-header-nav-dropdown.TouchHover--hidden
+        li
+          = link_to t('.about_us.about_site'), t('shared.urls.about_us'), data: navigation_push
+        li
+          = link_to t('.about_us.about_team'), t('shared.urls.about_team'), data: navigation_push
+
+    / Recommendations
+    li.TouchHover
+      = link_to t('.libraries.heading'), libraries_path, data: navigation_push, class: 'TouchHover--indicator'
+      ul.l-header-nav-dropdown.TouchHover--hidden
+        li
+          = link_to t('.libraries.brand_recommendations'), libraries_path, data: navigation_push
+        li
+          = link_to t('.libraries.user_recommendations'), libraries_path, data: navigation_push
+        li
+          = link_to t('.libraries.sponsored_books'), libraries_path, data: navigation_push
+
+    / Bobooki Stories
+    li.TouchHover
+      = link_to t('layouts.partials.footer.stories.heading'), t('shared.urls.stories')
+
     / Marketplace
     /li.TouchHover
       = link_to t('.marketplace.title'), articles_path,
@@ -84,10 +108,6 @@ nav.l-header-nav
         li
           = link_to t('.marketplace.libraries'), libraries_path,
                     data: navigation_push
-
-    / Suggestions
-    li.TouchHover
-      = link_to t('.libraries'), libraries_path, data: navigation_push
 
     / Profile & Logout
     - if user_signed_in?
@@ -128,9 +148,7 @@ nav.l-header-nav
             = link_to t('.admin.statistics'), statistics_general_path
           li
             = link_to t('.admin.sidekiq'), sidekiq_web_path + "_"
-    / About us
-    li.TouchHover
-      = link_to t('.about_us.title'), '/ueber_uns'
+
 
     / Cart
     - if current_cart && policy(current_cart).show?(cookies.signed[:cart])\

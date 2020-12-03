@@ -24,4 +24,5 @@ de:
       github: 'https://github.com/fdo-labs/bobooki'
       imprint: '/impressum'
       stories: 'https://stories.bobooki.de/'
+      about_team: 'https://stories.bobooki.de/ueber-uns/'
     copyright_html: &copyright "&copy; Copyright 2020 Bobooki.de"

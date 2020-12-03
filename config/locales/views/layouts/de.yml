@@ -26,7 +26,7 @@ de:
           categories: "Kategorien"
         stories:
           heading: "Bobooki Stories"
-          suggestions: "Buchempfehlungen und Hintergrundgeschichten"
+          recommendations: "Buchempfehlungen und Hintergrundgeschichten"
         subscription:
           heading: Runde-Sache-Abo
           order: Bestellen
@@ -72,6 +72,8 @@ de:
       header_nav:
         about_us:
           title: 'Über uns'
+          about_site: 'Über Bobooki'
+          about_team: 'Unser Team'
           fairmondo: 'Bobooki'
           marketplace: 'Über den Marktplatz'
           coop: 'Genossenschaft'
@@ -84,7 +86,11 @@ de:
           buy: "Kaufen"
           sell: "Verkaufen"
           libraries: "Sammlungen"
-        libraries: "Empfehlungen"
+        libraries:
+          heading: "Empfehlungen"
+          brand_recommendations: "Bobooki empfielt"
+          user_recommendations: "Nutzer*innen empfehlen"
+          sponsored_books: "Patenbücher"
         subscriptions: "Runde Sache Abo"
         myfairmondo:
           title: 'Mein Konto'
