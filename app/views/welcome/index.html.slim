@@ -6,27 +6,28 @@
   .category-dropdown
     = render 'categories/shared/category_tree'
 
-/- cache 'billboards' do
+- cache 'billboards' do
   = render 'billboards'
 
-/- cache 'genobox' do
+- cache 'genobox' do
   = render 'genobox_aside'
 
 /- cache 'filter_boxes' do
   = render 'filter_boxes'
 
-/= render 'last_hearted_libraries', last_hearted_libraries: @last_hearted_libraries
+= render 'last_hearted_libraries', last_hearted_libraries: @last_hearted_libraries
 
-/= render 'article_queue', number: 1, side: :left, queue: @queue1
+= render 'article_queue', number: 1, side: :left, queue: @queue1
 
-/= render 'article_queue', number: 2, side: :right, queue: @queue2
+= render 'article_queue', number: 2, side: :right, queue: @queue2
 
-/= render 'trending_libraries', trending_libraries: @trending_libraries
+= render 'trending_libraries', trending_libraries: @trending_libraries
 
 /- cache 'card_slides' do
   = render 'card_slides'
 
-/= render 'article_queue', number: 3, side: :right, queue: @donation_articles
+= render 'article_queue', number: 3, side: :left, queue: @donation_articles
+= render 'article_queue', number: 4, side: :right, queue: @donation_articles
 
 /- cache 'user_slides' do
   = render 'user_slides'
