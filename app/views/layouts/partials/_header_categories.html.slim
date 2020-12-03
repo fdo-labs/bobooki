@@ -1,7 +1,7 @@
 nav.l-header-categories
   - cache 'category_navigation' do
     ul
-      - Category.other_category_last.weighted.includes(:children).sorted\
+      - Category.other_category_last.limit(8).includes(:children).sorted\
         .roots.each do |category|
         li.TouchHover
           = link_to category.name,
