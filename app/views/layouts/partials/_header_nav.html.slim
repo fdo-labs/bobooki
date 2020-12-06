@@ -15,18 +15,22 @@ nav id="l-header-mnav" class="l-header-mnav" role="navigation"
         = link_to t('.cart.title_html', count: 0),
                 empty_cart_path, data: navigation_push
 
-    / Marketplace
+    / libraries
     li.l-header-mnav-menu-item
-      = link_to t('.libraries'), libraries_path, data: navigation_push
-    /ul.mnav-menu-item-submenu
-            li.mnav-menu-item-submenu-item
-              = link_to t('.marketplace.buy'), articles_path
-            - if User.is_admin? current_user
-              li.mnav-menu-item-submenu-item
-                = link_to t('.marketplace.sell'), new_article_path
-            li.mnav-menu-item-submenu-item
-              = link_to t('.marketplace.libraries'), libraries_path,
-                        data: navigation_push
+      = link_to t('.libraries.heading'), libraries_path, data: navigation_push
+      /ul.mnav-menu-item-submenu
+                    li.mnav-menu-item-submenu-item
+                      = link_to t('.marketplace.buy'), articles_path
+                    - if User.is_admin? current_user
+                      li.mnav-menu-item-submenu-item
+                        = link_to t('.marketplace.sell'), new_article_path
+                    li.mnav-menu-item-submenu-item
+                      = link_to t('.marketplace.libraries'), libraries_path,
+                                data: navigation_push
+
+    / Stories
+    li.l-header-mnav-menu-item
+      = link_to t('layouts.partials.footer.stories.heading'), t('shared.urls.stories')
 
     - if user_signed_in?
       / Profile & Logout
@@ -64,8 +68,13 @@ nav id="l-header-mnav" class="l-header-mnav" role="navigation"
             = link_to t('.admin.sidekiq'), sidekiq_web_path + "_"
 
     / About us
-    li.l-header-mnav-menu-item
-      = link_to t('.about_us.title'), '/ueber_uns'
+    li.l-header-mnav-menu-item.l-header-mnav--parent
+      = link_to t('.about_us.title'), t('shared.urls.about_us')
+      ul.mnav-menu-item-submenu
+        /li.mnav-menu-item-submenu-item
+          = link_to t('.about_us.about_site'), t('shared.urls.about_us'),data: navigation_push
+        li.mnav-menu-item-submenu-item
+          = link_to t('.about_us.about_team'), t('shared.urls.about_team'), data: navigation_push
 
 / *** Desktop navigation ***
 nav.l-header-nav
@@ -73,7 +82,7 @@ nav.l-header-nav
 
     / About us
     li.TouchHover
-      = link_to t('.about_us.title'), '/ueber_uns', class: 'TouchHover--indicator'
+      = link_to t('.about_us.title'), t('shared.urls.about_us'), class: 'TouchHover--indicator'
       ul.l-header-nav-dropdown.TouchHover--hidden
         li
           = link_to t('.about_us.about_site'), t('shared.urls.about_us'), data: navigation_push
@@ -82,8 +91,8 @@ nav.l-header-nav
 
     / Recommendations
     li.TouchHover
-      = link_to t('.libraries.heading'), libraries_path, data: navigation_push, class: 'TouchHover--indicator'
-      ul.l-header-nav-dropdown.TouchHover--hidden
+      = link_to t('.libraries.heading'), libraries_path, data: navigation_push
+      /ul.l-header-nav-dropdown.TouchHover--hidden
         li
           = link_to t('.libraries.brand_recommendations'), libraries_path, data: navigation_push
         li
