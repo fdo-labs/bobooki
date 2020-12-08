@@ -68,11 +68,11 @@
   input { background-color: white;}
 
   @include at-breakpoint($bp-tablet) {
-    &:first-child {
+    /*&:first-child {
       @include span(3 of 5 0.1);
-    }
+    }*/
     &:last-child {
-      @include span(2 of 5 0.1);
+      @include span(5 of 5 0.1);
       @include omega;
     }
 

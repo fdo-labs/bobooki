@@ -14,7 +14,7 @@
             input_html: { id: 'search_input',
               placeholder: t('welcome.search_fair'),
               data: { autocomplete_remote_url: autocomplete_articles_path } }
-          = f.input :category_id, label: false, as: :select,
+          /= f.input :category_id, label: false, as: :select,
               collection: search_cache.category_collection,
               include_blank: 'Alle Kategorien'
       .l-header-search-button
