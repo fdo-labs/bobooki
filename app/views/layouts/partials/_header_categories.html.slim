@@ -7,7 +7,7 @@ nav.l-header-categories
           = link_to category.name,
             category_path(category),
             data: navigation_push
-          - if category.children.present?
+          /- if category.children.present?
             ul.l-header-categories-children.TouchHover--hidden
               - category.children_with_active_articles\
                 .each_slice(category.view_columns) do |children|
@@ -16,7 +16,7 @@ nav.l-header-categories
                     = link_to child.name,
                       category_path(child),
                       data: navigation_push
-      li.TouchHover
+      /li.TouchHover
         span
           = t('.more')
         ul.l-header-categories-children.TouchHover--hidden
