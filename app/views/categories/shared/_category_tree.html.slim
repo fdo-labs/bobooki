@@ -43,4 +43,4 @@
 
     - else  # If no category is selected
       / Show top categories
-      = render partial: 'categories/shared/category_tree_leaf', collection: Category.other_category_last.sorted.roots, as: :category
+      = render partial: 'categories/shared/category_tree_leaf', collection: Category.other_category_last.sorted.reject{|c| c.active_articles.empty?}, as: :category
