@@ -31,6 +31,8 @@ class WelcomeController < ApplicationController
     query_object = FeaturedLibraryQuery.new
     @queue1 = query_object.set(:queue1).find(2)
     @queue2 = query_object.set(:queue2).find(2)
+    @queue3 = query_object.set(:queue3).find(2)
+    @queue4 = query_object.set(:queue4).find(2)
     @donation_articles = query_object.set(:donation_articles).find(2)
   end
 

@@ -2,7 +2,7 @@ nav.l-header-categories
   - cache 'category_navigation' do
     ul
       - Category.where(id: [56,117,1654,4,85]).sorted\
-        .roots.each do |category|
+        .each do |category|
         li.TouchHover
           = link_to category.name,
             category_path(category),
