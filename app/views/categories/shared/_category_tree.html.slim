@@ -31,7 +31,7 @@
         - displayed_subtree = category.self_and_sorted_siblings
       - else
         - displayed_category = category
-        - displayed_subtree = category.sorted_children
+        - displayed_subtree = category.sorted_children.reject{|c| c.active_articles.empty?}
 
       / Render the category/parent and its siblings
       = render partial: 'categories/shared/category_tree_leaf',
@@ -39,7 +39,7 @@
                 locals: { subtree: displayed_subtree }
 
       = render partial: 'categories/shared/category_tree_leaf',
-                collection: displayed_category.sorted_siblings, as: :category, locals: {ignore_counts: true}
+                collection: displayed_category.sorted_siblings.reject{|c| c.active_articles.empty?}, as: :category, locals: {ignore_counts: true}
 
     - else  # If no category is selected
       / Show top categories
