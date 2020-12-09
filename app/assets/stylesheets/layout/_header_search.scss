@@ -80,7 +80,8 @@
 
   @include till-breakpoint($bp-tablet) {
     &:last-child {
-      display:none;
+      /* no more need to hide last-child
+      since we changed the order of the input elements */
     }
   }
 
