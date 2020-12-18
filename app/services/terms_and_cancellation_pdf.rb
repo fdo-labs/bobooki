@@ -6,6 +6,14 @@ class TermsAndCancellationPdf < Prawn::Document
   def initialize(lig)
     super(top_margin: 70, left_margin: 80, right_margin: 80, bottom_margin: 50)
     @lig = lig
+
+    font_families.update(
+      "OpenSans" => {         :bold        => "app/assets/fonts/opensans/OpenSans-Bold-webfont.ttf",
+                              :italic      => "app/assets/fonts/opensans/OpenSans-Italic-webfont.ttf",
+                              :bold_italic => "app/assets/fonts/opensans/OpenSans-BoldItalic-webfont.ttf",
+                              :normal      => "app/assets/fonts/opensans/OpenSans-Regular-webfont.ttf" })
+
+    font "OpenSans"
     body
   end
 
