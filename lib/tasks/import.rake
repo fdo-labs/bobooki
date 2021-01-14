@@ -10,4 +10,27 @@ namespace :import do
       content_new.save
     end
   end
+
+  desc 'Import libri updates'
+  task libri_updates: :environment do
+
+    def remote_file_exists?(url)
+      uri = URI(url)
+      request = Net::HTTP.new uri.host
+      response= request.request_head uri.path
+      return response.code.to_i == 200
+    end
+
+    date = Time.new.strftime("%Y%m%d")
+    todays_uri_pattern = "http://10.0.0.4/export/Export-#{date}-%s.csv" # todo: clean hardcode
+
+    user = User.find_by(email:"shop@bobooki.de")  # todo: clean hardcode
+    count = 0
+
+    while remote_file_exists?(todays_uri_pattern % count) do
+      mass_upload = user.mass_uploads.build({file: todays_uri_pattern % count})
+      mass_upload.process if mass_upload.save
+      count+=1
+    end
+  end
 end
