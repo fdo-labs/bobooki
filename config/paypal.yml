@@ -1,14 +1,14 @@
 production:
-  login: "paypal_api1.bobooki.de"
-  password: "NBNVEVFQNLFA8289"
-  signature: "AZm0OTBQfXS7f8lKhEPZ4YVkNTsjA7SJaHbj53AYrp-VTaG5AH3u1J9O"
+  login: ""
+  password: ""
+  signature: ""
 staging:
-  login: "sb-wdttb1625507_api1.business.example.com"
-  password: "888W7RS8BZ4DXQN3"
-  signature: "Ay2o8uhkjKL8vrU6YiL5nxm7U8AqAhuZb4jSJ21MV.k.kykcAqM9kvhQ"
+  login: ""
+  password: ""
+  signature: ""
 development:
-  login: "sb-wdttb1625507_api1.business.example.com"
-  password: "888W7RS8BZ4DXQN3"
-  signature: "Ay2o8uhkjKL8vrU6YiL5nxm7U8AqAhuZb4jSJ21MV.k.kykcAqM9kvhQ"
+  login: ""
+  password: ""
+  signature: ""
 test:
   login: sandbox
