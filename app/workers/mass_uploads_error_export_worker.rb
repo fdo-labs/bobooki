@@ -28,9 +28,6 @@ class MassUploadsErrorExportWorker
     combined_csv = ArticleExporter.export_erroneous_articles(combined_erroneous_articles)
 
     # send mail to developer
-    @text = combined_csv
-    @user = user
-    mail = @user ? @user.email : EMAIL_ADDRESSES['default']
-    mail(to: "henrik@fdo-solutions.de", from: mail, subject: "MassUpload Errors on %s" % [Time.new.strftime("%Y-%m-%d")])
+    ArticleMailer.report_article(Article.first,user,combined_csv)
   end
 end
