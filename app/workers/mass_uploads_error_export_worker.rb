@@ -18,7 +18,7 @@ class MassUploadsErrorExportWorker
 
     # add error message to article_csv
     combined_erroneous_articles.map do |article|
-      row = article["article_csv"].gsub("\n","")
+      row = article["article_csv"].to_s.gsub("\n","")
       error = article["validation_errors"].to_s
       row_with_error = row + ";" + error + "\n;" # todo: remove hardcoded column separator
       article["article_csv"] = row_with_error
