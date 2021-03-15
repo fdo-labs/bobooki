@@ -36,7 +36,7 @@ class MassUploadsImportWorker
       mass_upload = user.mass_uploads.build({file: uri})
       mass_upload.process if mass_upload.save
       count+=1
-      uri = todays_uri_pattern.gsub("COUNT",count.to_s)
+      uri = todays_uri_pattern.gsub("{COUNT}",count.to_s)
     end
   end
 end
