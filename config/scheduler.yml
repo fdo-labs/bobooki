@@ -1,9 +1,9 @@
-import_mass_uploads_from_remote:
-  cron: "0 7 * * *"
-  class: MassUploadsImportWorker
-  queue: mass_upload
-  args: ["http://10.0.0.2/export/Export-{DATE}-{COUNT}.csv",2]
-  description: "Imports Mass Uploads from external source to User every day at 7am"
+#import_mass_uploads_from_remote:
+#  cron: "0 7 * * *"
+#  class: MassUploadsImportWorker
+#  queue: mass_upload
+#  args: ["http://10.0.0.2/export/Export-{DATE}-{COUNT}.csv",2]
+#  description: "Imports Mass Uploads from external source to User every day at 7am"
 
 activate_finished_mass_uploads:
   cron: "0 */3 * * *"
