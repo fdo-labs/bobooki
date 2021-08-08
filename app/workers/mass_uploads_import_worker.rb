@@ -13,7 +13,7 @@ class MassUploadsImportWorker
   # `uri_pattern` should have the format "http://10.0.0.4/export/Export-{DATE}-{COUNT}.csv"
   # whereas {DATE} will be replaced with todays date pattern (%Y%m%d)
   # and {COUNT} will be replaced with an incremented integer (starting from 0)
-  def perform (uri_pattern, user_id)
+  def perform (uri_pattern, user_id, start_counting_from = 0)
 
     user_id = user_id.to_i
     uri_pattern = uri_pattern.to_s
@@ -29,7 +29,7 @@ class MassUploadsImportWorker
     todays_uri_pattern = uri_pattern.gsub("{DATE}",date)
 
     user = User.find(user_id)
-    count = 0
+    count = start_counting_from
     uri = todays_uri_pattern.gsub("{COUNT}",count.to_s)
 
     while remote_file_exists?(uri) do
