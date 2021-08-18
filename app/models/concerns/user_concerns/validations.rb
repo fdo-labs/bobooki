@@ -17,6 +17,9 @@ module UserConcerns
 
       validates :standard_address, presence: true, if: :wants_to_sell?
 
+      # Disable selling for PrivateUser
+      validates :type, inclusion: { in: ['LegalEntity'] }, if: :wants_to_sell?
+
       # TODO: Language specific validators
       # german validator for iban
       validates :iban, format: { with: /\A[A-Za-z]{2}[0-9]{2}[A-Za-z0-9]{18}\z/ }, unless: Proc.new { |c| c.iban.blank? }, if: :is_german?
