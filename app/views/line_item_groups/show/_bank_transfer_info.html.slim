@@ -3,7 +3,7 @@
   = bank_account_line(seller, :bank_account_owner)
   = bank_account_line(seller, :iban)
   = bank_account_line(seller, :bic)
-  - unless seller.bank_name.empty?
+  - if seller.bank_name
     = bank_account_line(seller, :bank_name)
   .line
     .heading
