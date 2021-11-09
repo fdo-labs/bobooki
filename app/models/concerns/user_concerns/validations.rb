@@ -10,12 +10,15 @@ module UserConcerns
       validates :slug, presence: true
 
       # Registration validations
-      validates :type, inclusion: { in: %w(PrivateUser) }
+      validates :type, inclusion: { in: %w(PrivateUser LegalEntity) }
       validates :nickname, presence: true, uniqueness: true
       validates :legal, acceptance: true, on: :create
       validates_associated :standard_address, unless: Proc.new { |u| u.encrypted_password_changed? }
 
       validates :standard_address, presence: true, if: :wants_to_sell?
+
+      # Disable selling for PrivateUser
+      validates :type, inclusion: { in: ['LegalEntity'] }, if: :wants_to_sell?
 
       # TODO: Language specific validators
       # german validator for iban

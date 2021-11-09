@@ -1,3 +1,24 @@
+import_mass_uploads_from_remote:
+  cron: "0 3-16 * * *"
+  class: MassUploadsImportWorker
+  queue: mass_upload
+  args: ["http://10.0.0.2/export/Export-{DATE}-{COUNT}.csv",2]
+  description: "Check for Mass Uploads at external source and import to User every hour"
+
+activate_finished_mass_uploads:
+  cron: "0 */3 * * *"
+  class: MassUploadsActivationWorker
+  queue: mass_uploads_finish
+  args: [2]
+  description: "Activate finished Mass Uploads for User every third hour"
+
+#export_mass_upload_errors:
+#  cron: "0 10 * * *"
+#  class: MassUploadsErrorExportWorker
+#  queue: mass_uploads_finish
+#  args: [1]
+#  description: "Exports errored Mass Uploads for User every day"
+
 check_for_finished_mass_uploads:
   cron: "*/10 * * * *"
   class: MassUploadsFinishWorker

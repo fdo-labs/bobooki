@@ -12,9 +12,9 @@ namespace :import do
   end
 
   desc 'Import libri updates'
-  task libri_updates: :environment do
+  task :libri_updates, [:uri_pattern, :user_id] => :environment do |task,args|
 
-    def remote_file_exists?(url)
+  def remote_file_exists?(url)
       uri = URI(url)
       request = Net::HTTP.new uri.host
       response= request.request_head uri.path
@@ -22,15 +22,17 @@ namespace :import do
     end
 
     date = Time.new.strftime("%Y%m%d")
-    todays_uri_pattern = "http://10.0.0.4/export/Export-#{date}-%s.csv" # todo: clean hardcode
+    todays_uri_pattern = args.uri_pattern.gsub("DATE",date)
 
-    user = User.find_by(email:"shop@bobooki.de")  # todo: clean hardcode
+    user = User.find(args[:user_id].to_i)
     count = 0
+    uri = todays_uri_pattern.gsub("COUNT",count.to_s)
 
-    while remote_file_exists?(todays_uri_pattern % count) do
-      mass_upload = user.mass_uploads.build({file: todays_uri_pattern % count})
+    while remote_file_exists?(uri) do
+      mass_upload = user.mass_uploads.build({file: uri})
       mass_upload.process if mass_upload.save
       count+=1
+      uri = todays_uri_pattern.gsub("COUNT",count.to_s)
     end
   end
 end

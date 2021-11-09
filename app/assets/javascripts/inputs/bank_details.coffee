@@ -10,6 +10,7 @@ $(document).ready ->
   iban = $('#iban').value
   bic = $('#bic').value
 
+  ### Remove BIC/IBAN check since we don't have an KontoAPI key
   $('#iban').focusout ->
     iban = this.value
     removeWarning '#user_iban_input'
@@ -25,7 +26,7 @@ $(document).ready ->
       console.log result
       unless result
         addWarning '#user_bic_input', 'Bitte BIC überprüfen.'
-
+  ###
 addWarning = (element, message)->
   $("<p>").appendTo(element).addClass('inline-errors').html(message)
   $('#user_bankaccount_warning').checked = true

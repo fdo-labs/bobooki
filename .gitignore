@@ -107,7 +107,7 @@ sidekiq_pro_path.yml
 .rvmrc
 
 # Paypal
-paypal.yml
+config/paypal.yml
 
 # mac DS_Store
 *.DS_Store

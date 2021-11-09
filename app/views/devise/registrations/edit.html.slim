@@ -143,50 +143,51 @@ h1= t('common.actions.edit_profile')
       = render partial: '/devise/registrations/edit_legal', locals: {f: f}
       = render partial: '/devise/registrations/edit_alternative_emails', locals: { f: f }
 
-    = f.input_step :unified_transport do
-      = f.inputs do
-        .Accordion-step
-          h3.unified_transport_title
-            = t('users.title.unified_transport')
-            span.sprite_helper title=t('users.hints.unified_transport')
-
-          = f.input :unified_transport_provider, :input_html => { :placeholder => t('article.transport.placeholders.type2_provider') }
-          = f.input :unified_transport_price
-          = f.input :unified_transport_maximum_articles, wrapper_html: {class: "unified_transport_maximum_articles"}
-          = t('users.unified_warning')
-
-        .Accordion-step.free_transport_step
-          h3.free_transport_title
-            = t('users.title.free_at_transport')
-            span.sprite_helper title=t('users.hints.free_at_transport')
-          = f.input :free_transport_available, wrapper_html: {class: "free_transport_available"}
-          = f.input :free_transport_at_price, wrapper_html: {class: "free_transport_at_price_cents"}
-
-    = f.input_step :payment, tooltip: true do
-      = f.inputs do
-        .Accordion-step
-          h3= t('users.form_titles.payment_bank_account')
-
-          = f.input :bank_account_owner, required: true, label: t('formtastic.labels.user.bank_account_owner')
-          = f.input :bank_name, input_html: {id: "bank_name"}, label: t('formtastic.labels.user.bank_name')
-          = f.input :iban, required: true, input_html: {id: "iban"}, label: t('formtastic.labels.user.iban'), tooltip: true
-          = f.input :bic, required: true, input_html: {id: "bic"}, label: t('formtastic.labels.user.bic'), tooltip: true
-
-        / only LegalEntities will be billed for fees
-        /- if resource.is_a?(LegalEntity)
+    - if current_user.can_sell?
+      = f.input_step :unified_transport do
+        = f.inputs do
           .Accordion-step
-            - direct_debit_link = link_to t('formtastic.labels.user.sepa'), '/sepa?layout=false', target: '_blank', class: 'ungrouped_colorbox'
-            - if resource.active_direct_debit_mandate.present?
-              p= "#{t('formtastic.labels.user.active_direct_debit_mandate_reference')}: "\
-                 "#{resource.active_direct_debit_mandate.to_s}"
-            - else
-              = f.input :direct_debit_confirmation, as: :boolean, required: true, label: t('formtastic.labels.user.direct_debit_confirmation_html').html_safe + direct_debit_link
+            h3.unified_transport_title
+              = t('users.title.unified_transport')
+              span.sprite_helper title=t('users.hints.unified_transport')
 
-        .Accordion-step
-          h3= t('users.form_titles.payment_paypal')
+            = f.input :unified_transport_provider, :input_html => { :placeholder => t('article.transport.placeholders.type2_provider') }
+            = f.input :unified_transport_price
+            = f.input :unified_transport_maximum_articles, wrapper_html: {class: "unified_transport_maximum_articles"}
+            = t('users.unified_warning')
 
-          = f.input :paypal_account, label: t('formtastic.labels.user.paypal_account'), tooltip: true
-          = f.input :fastbill_profile_update, as: :hidden, input_html: { value: true }
+          .Accordion-step.free_transport_step
+            h3.free_transport_title
+              = t('users.title.free_at_transport')
+              span.sprite_helper title=t('users.hints.free_at_transport')
+            = f.input :free_transport_available, wrapper_html: {class: "free_transport_available"}
+            = f.input :free_transport_at_price, wrapper_html: {class: "free_transport_at_price_cents"}
+
+      = f.input_step :payment, tooltip: true do
+        = f.inputs do
+          .Accordion-step
+            h3= t('users.form_titles.payment_bank_account')
+
+            = f.input :bank_account_owner, required: true, label: t('formtastic.labels.user.bank_account_owner')
+            = f.input :bank_name, input_html: {id: "bank_name"}, label: t('formtastic.labels.user.bank_name')
+            = f.input :iban, required: true, input_html: {id: "iban"}, label: t('formtastic.labels.user.iban'), tooltip: true
+            = f.input :bic, required: true, input_html: {id: "bic"}, label: t('formtastic.labels.user.bic'), tooltip: true
+
+          / only LegalEntities will be billed for fees
+          /- if resource.is_a?(LegalEntity)
+            .Accordion-step
+              - direct_debit_link = link_to t('formtastic.labels.user.sepa'), '/sepa?layout=false', target: '_blank', class: 'ungrouped_colorbox'
+              - if resource.active_direct_debit_mandate.present?
+                p= "#{t('formtastic.labels.user.active_direct_debit_mandate_reference')}: "\
+                   "#{resource.active_direct_debit_mandate.to_s}"
+              - else
+                = f.input :direct_debit_confirmation, as: :boolean, required: true, label: t('formtastic.labels.user.direct_debit_confirmation_html').html_safe + direct_debit_link
+
+          .Accordion-step
+            h3= t('users.form_titles.payment_paypal')
+
+            = f.input :paypal_account, label: t('formtastic.labels.user.paypal_account'), tooltip: true
+            = f.input :fastbill_profile_update, as: :hidden, input_html: { value: true }
     = f.actions do
       = f.action :submit, button_html: {class: "Button"}
 

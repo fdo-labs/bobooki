@@ -7,7 +7,7 @@ development:
   host: 'localhost:9200'
   prefix: 'development'
 production:
-  host: '10.0.0.4:9200' # ES 5.4.0
+  host: '10.0.0.2:9200' # ES 5.4.0
 staging:
-  host: '10.0.0.4:9200' # ES 5.4.0
+  host: '10.0.0.2:9200' # ES 5.4.0
   prefix: 'staging'

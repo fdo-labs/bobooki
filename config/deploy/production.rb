@@ -3,8 +3,8 @@
 #   See the COPYRIGHT file for details.
 
 set :stage, :production
-set :deploy_to, '/home/deploy/nama/'
+set :deploy_to, '/deploy/bbprod'
 
-server '78.47.131.16', user: 'deploy', roles: %w{web app db sidekiq console}
+server '162.55.45.63', user: 'deploy', roles: %w{web app db sidekiq console}
 
 set :branch, ENV['BRANCH_NAME'] || 'master'
