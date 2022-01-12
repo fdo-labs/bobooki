@@ -235,6 +235,11 @@ ul.category-selected-list {
 .contents > .info > .right > .details {
   font-size: 0.7em;
   margin-bottom: 0.5em;
+
+  .out-of-stock {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
 }
 
 .contents > .info > .right > .details > .price {
