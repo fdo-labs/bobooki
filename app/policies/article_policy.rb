@@ -58,11 +58,11 @@ class ArticlePolicy < Struct.new(:user, :article)
   end
 
   def purchasable?
-    not_owned_and_active? && !article.seller_vacationing?
+    not_owned_and_active? && !article.seller_vacationing? && article.is_available?
   end
 
   def purchasable_later?
-    not_owned_and_active? && article.seller_vacationing?
+    not_owned_and_active? && article.seller_vacationing? && article.is_available?
   end
 
   private
