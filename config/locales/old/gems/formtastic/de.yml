@@ -20,7 +20,7 @@ de:
         image: Profilbild
         password: "Passwort"
         password_confirmation: "Passwort wiederholen"
-        newsletter: "Ich möchte den monatlichen Newsletter mit besonderen Produktvorstellungen erhalten."
+        newsletter: "Ich möchte allgemeine Neuigkeiten und Ankündigungen von Bobooki erhalten."
         remember_me: "Eingeloggt bleiben"
         current_password: "Bisheriges Passwort"
         vacationing: "Ich bin derzeit im Urlaub"

@@ -45,6 +45,10 @@ module ArticleConcerns
       self.business_transactions.any? || self.line_items.any?
     end
 
+    def is_available?
+      self.quantity > 0 && self.quantity_available > 0
+    end
+
     # should the fair alternative be shown for the seller
     def show_fair_alternative_for_seller?
       if EXCEPTIONS_ON_FAIRMONDO['no_fair_alternative'] && EXCEPTIONS_ON_FAIRMONDO['no_fair_alternative']['user_ids']
