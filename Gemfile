@@ -181,3 +181,5 @@ group :development, :test, :staging do
   gem 'factory_bot_rails', '~> 4.11.1'
   gem 'faker'
 end
+
+gem "mysql2", "~> 0.5.3"
