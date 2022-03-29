@@ -18,7 +18,7 @@
 
 // Responsive code: small version
 @include till-breakpoint($bp-tablet) {
-  #billboard-1st {   background-image: image-url('welcome/BB-Billboard1-625x410.jpg');  }
+  #billboard-1st {   background-image: image-url('welcome/Ukraine625x410.png');  }
   #billboard-2nd {   background-image: image-url('welcome/BB-Billboard2-625x410.jpg');  }
   #billboard-3rd {   background-image: image-url('welcome/BB-Billboard3-625x410.jpg');  }
 }
@@ -26,7 +26,7 @@
 
 // Responsive code: medium version
 @include between-breakpoints($bp-tablet, $bp-tablet-horizontal) {
-  #billboard-1st {   background-image: image-url('welcome/BB-Billboard1-440x410.jpg');  }
+  #billboard-1st {   background-image: image-url('welcome/Ukraine410x410.png');  }
   #billboard-2nd {   background-image: image-url('welcome/BB-Billboard2-440x410.jpg');  }
   #billboard-3rd {   background-image: image-url('welcome/BB-Billboard3-440x410.jpg');  }
 }
@@ -34,7 +34,7 @@
 
 // Responsive code: big version
 @include at-breakpoint($bp-tablet-horizontal) {
-  #billboard-1st {   background-image: image-url('welcome/BB-Billboard1-900x410.jpg');  }
+  #billboard-1st {   background-image: image-url('welcome/Ukraine900x410.png');  }
   #billboard-2nd {   background-image: image-url('welcome/BB-Billboard2-900x410.jpg');  }
   #billboard-3rd {   background-image: image-url('welcome/BB-Billboard3-900x410.jpg');  }
 }
