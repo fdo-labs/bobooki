@@ -27,10 +27,19 @@
   margin-bottom: 1em;
 }
 
-.content-share > .take_part  {
+.content-share > .campaign-aside  {
+  @include whitebox;
+  padding: 0;
+  width: auto;
+  color: $white;
+  border-radius: 0.5em;  // Circumvent bug in Webkit browsers that would hide the rounded border
+  overflow: hidden;
+
   img {
     width: 100%;
+    display: block;
   }
+
 }
 
 .content-nav {

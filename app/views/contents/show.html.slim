@@ -5,7 +5,4 @@
 .content
   = render resource
 .content-share
-  - if params[:id] == 'wird-international'
-    = render '/shared/campaign_shares'
-  - else
-    = render '/shared/take_part'
+  = render '/shared/campaign'
