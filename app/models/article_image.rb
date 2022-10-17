@@ -10,13 +10,14 @@ class ArticleImage < Image
   has_attached_file(
     :image,
     styles: {
-      original: { geometry: '900>x600>', animated: false },
-      medium: { geometry: '520>x360>', animated: false },
-      thumb: { geometry: '280x200>', animated: false }
+      original: { geometry: '900>x600>', animated: false, lossy: true, format: :webp },
+      medium: { geometry: '520>x360>', animated: false, lossy: true, format: :webp },
+      thumb: { geometry: '280x200>', animated: false, lossy: true, format: :webp }
     },
     convert_options: {
-      medium: '-quality 75 -strip',
-      thumb: '-quality 75 -strip -background white -gravity center -extent 260x180'
+      original: '-quality 50 -strip',
+      medium: '-quality 50 -strip',
+      thumb: '-quality 50 -strip -background white -gravity center -extent 260x180'
     },
     default_url: 'missing.png',
     url: '/system/images/:id_partition/:style/:filename',
@@ -28,7 +29,7 @@ class ArticleImage < Image
   validates_attachment_presence :image, unless: :external_url
   validates_attachment_content_type :image,
                                     content_type: %w(
-                                      image/jpeg image/png image/gif
+                                      image/jpeg image/png image/gif image/webp
                                     )
   validates_attachment_size :image, in: 1..20.megabytes # the 1 means one byte, not one megabyte
 
