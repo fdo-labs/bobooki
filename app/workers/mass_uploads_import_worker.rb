@@ -43,7 +43,7 @@ class MassUploadsImportWorker
     # and to make sure we didn't miss anything, also yesterday's files
     todays_uri_pattern = uri_pattern.gsub("{DATE}",0.day.ago.strftime("%Y%m%d"))
     yesterdays_uri_pattern = uri_pattern.gsub("{DATE}",1.day.ago.strftime("%Y%m%d"))
-    remote_files = get_files(yesterdays_uri_pattern) + get_files(todays_uri_pattern)
+    remote_files = (get_files(yesterdays_uri_pattern) + get_files(todays_uri_pattern)).uniq
 
     # remove files which were already imported
     remote_files.reject! do |rf|
