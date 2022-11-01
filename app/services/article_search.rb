@@ -74,7 +74,7 @@ class ArticleSearch
       {simple_query_string: {
 
             # all_fields will be deprecated in ES6. use default_field: '*' instead
-            fields: ['title', 'gtin', 'content','slug','seller_nickname'],
+            #fields: ['title', 'gtin', 'content','slug','seller_nickname'],
 
             # we remove dashs in isbns like 123-456-789 for gtin search
             query: isbn_filter(@query.q),
