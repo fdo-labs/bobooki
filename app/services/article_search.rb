@@ -79,8 +79,8 @@ class ArticleSearch
             # we remove dashs in isbns like 123-456-789 for gtin search
             query: isbn_filter(@query.q),
 
-            # fuzzy has more effect when the analyzer is diabled.
-            analyzer: 'german_search_analyzer',
+            # fuzzy has more effect when the analyzer is disabled.
+            # analyzer: 'german_search_analyzer',
             default_operator: 'and',
             lenient: true
           }
