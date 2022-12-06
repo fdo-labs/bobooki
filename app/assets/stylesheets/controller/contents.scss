@@ -30,6 +30,7 @@
 .content-share > .campaign-aside  {
   @include whitebox;
   padding: 0;
+  margin-bottom: 1em;
   width: auto;
   color: $white;
   border-radius: 0.5em;  // Circumvent bug in Webkit browsers that would hide the rounded border
