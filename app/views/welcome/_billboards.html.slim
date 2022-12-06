@@ -1,5 +1,10 @@
 // Billboards
-
+- billboard_urls = [  \
+            ['Bobooki wird Partner von Circles', 'https://bobooki.de/libraries/54'],
+            ['Sinnvoll Geld verdienen mit Bobooki', 'https://stories.bobooki.de/die-buchplattform-fuer-autorinnen/'],
+            ['Erfahre mehr über unsere Buchpatenschaften', 'https://stories.bobooki.de/buchpatenschaften/'],
+            ['Bobooki ist Partner von Circles', '/circles']  \
+          ]
 #billboard
   #billboard-inner
     #js-billboardslides
@@ -12,12 +17,16 @@
 
       .billboard#billboard-1st
         article
-          = link_to 'Bobooki wird Partner von Circles', '/circles'
+          = link_to billboard_urls[0][0], billboard_urls[0][1]
 
       .billboard#billboard-2nd
         article
-          = link_to 'Sinnvoll Geld verdienen mit Bobooki', 'https://stories.bobooki.de/die-buchplattform-fuer-autorinnen/'
+          = link_to billboard_urls[1][0], billboard_urls[1][1]
 
       .billboard#billboard-3rd
         article
-          = link_to 'Erfahre mehr über unsere Buchpatenschaften', 'https://stories.bobooki.de/faq/'
+          = link_to billboard_urls[2][0], billboard_urls[2][1]
+
+      .billboard#billboard-4th
+        article
+          = link_to billboard_urls[3][0], billboard_urls[3][1]
